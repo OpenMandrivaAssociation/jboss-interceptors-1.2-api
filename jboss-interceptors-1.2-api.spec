@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 %global namedreltag .Alpha3
 %global namedversion %{version}%{?namedreltag}
 %global oname jboss-interceptors-api_1.2_spec
@@ -51,3 +51,14 @@ sed -i "s,59,51,;s,Temple Place,Franklin Street,;s,Suite 330,Fifth Floor,;s,0211
 
 %files javadoc -f .mfiles-javadoc
 %doc LICENSE
+
+%changelog
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.0-0.3.Alpha3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Tue Jul 09 2013 gil cattaneo <puntogil@libero.it> 1.0.0-0.2.Alpha3
+- switch to XMvn
+- minor changes to adapt to current guideline
+
+* Mon May 13 2013 gil cattaneo <puntogil@libero.it> 1.0.0-0.1.Alpha3
+- initial rpm
